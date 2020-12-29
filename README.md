@@ -39,8 +39,8 @@ if (!FFat.begin(0, "", 1)) die("Fat FS mount failed. Not enough RAM?");
 - Make sure you use one of the supported versions of Arduino IDE and have ESP32 core installed.
 - Download **esp32fs.zip** zipped tool from [latest release](https://github.com/lorol/arduino-esp32fs-plugin/releases)
 - In your Arduino sketchbook directory, create tools directory if it doesn't exist yet.
-- Unpack the tool into tools directory (the path will look like ```<home_dir>/Arduino/tools/ESP32FS/tool/esp32fs.jar```).
-- Make sure you have **mklittlefs[.exe]** and **mkfatfs[.exe]** available at **/tools** folder or in sub-folder there
+- Unpack the tool into "Setup->sketchbook location" **/tools** directory. Example: ```<home_dir>/Arduino/tools/ESP32FS/tool/esp32fs.jar``` or on OSX ```/Applications/Arduino.app/Contents/Java/tools/ESP32FS``` .
+- Make sure you have **mklittlefs[.exe]** and **mkfatfs[.exe]** available at esp32 core installation folder. Look inside of **\AppData\Local\Arduino15\...** or on zip IDE install, see "Setup->sketchbook location" **hardware\espressif\esp32\tools**
 - For reference, see at [previous releases](https://github.com/lorol/arduino-esp32fs-plugin/releases) for copies of archived binaries in question. 
 - You can also use provided **package_esp32_index.template.json** to run **get.py** with it and download the missing binary files
 - Restart Arduino IDE. 
