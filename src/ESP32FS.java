@@ -202,15 +202,13 @@ public class ESP32FS implements Tool {
     String toolExtension = ".py";
     if(PreferencesData.get("runtime.os").contentEquals("windows")) {
       toolExtension = ".exe";
-    } else if(PreferencesData.get("runtime.os").contentEquals("macosx")) {
-      toolExtension = "";
     }
 
     String pythonCmd;
     if(PreferencesData.get("runtime.os").contentEquals("windows"))
         pythonCmd = "python.exe";
     else
-        pythonCmd = "python";
+        pythonCmd = "python3";
     
     String mkspiffsCmd;
     if(PreferencesData.get("runtime.os").contentEquals("windows"))
