@@ -1,28 +1,3 @@
-# Note
-
-This is just a quick and fast hack to get this plugin to work under macOS Big Sur. It fixes the following error.
-```
-ValueError: dlsym(RTLD_DEFAULT, kIOMasterPortDefault): symbol not found
-```
-
-Download the plugin at [https://github.com/bergdahl/arduino-esp32fs-plugin/releases/tag/2.0.6.BigSur](https://github.com/bergdahl/arduino-esp32fs-plugin/releases/tag/2.0.6.BigSur) and follow the original instructions below.
-
-## Changes
-I changed the call to `esptool` to use the command `python3 esptool.py` instead as
-newer versions of the `esptool` tool seems to be Python only. Python version 2 is obsolete but still default on macOS, which is why I used `python3` to call the script.
-
-If you done an in-place upgrade of macOS you also need to upgrade to the latest version of the `pyserial` package as well;
-```
-pip3 install --upgrade pyserial
-```
-
-In case you use newer boards like the ESP32S2, you may also need to upgrade the `esptool.py` file in the board support folder. You can find the existong file under a folder named like `/Users/ -Your user Name- /Library/Arduino15/packages/esp32/tools/esptool_py/2.6.1`. Just replace esptool.py with the latest one. 
-
-You can find the latest version of `esptool` here - [https://github.com/espressif/esptool](https://github.com/espressif/esptool]). 
-
----
-# - Original README below -
-
 # Arduino ESP32 filesystem uploader 
 
 - Arduino plugin which packs sketch data folder into SPIFFS, LittleFS or FatFS filesystem image,
