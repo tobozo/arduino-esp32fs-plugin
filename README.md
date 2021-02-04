@@ -6,6 +6,7 @@ and uploads the image to ESP32 flash memory.
 - Added esp32 / esp32s2 chip detection based on Arduino IDE selection.
 - Added a choice to "Erase all flash".
 - You can have only one of three filesystems on same Arduino project as data partition.
+- See [bergahl notes for macOS](https://github.com/bergdahl/arduino-esp32fs-plugin/blob/2800b79970d09b3ab39fa4e774ee59bfcb92e036/README.md)
 
 ## Notes for SPIFFS
 
